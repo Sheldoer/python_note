@@ -1,9 +1,3 @@
-"""
-@File    ：人像分割.py
-@Author  ：叶庭云
-@CSDN    ：https://yetingyun.blog.csdn.net/
-@百度AI  ：https://ai.baidu.com/tech/body/seg
-"""
 import cv2
 import base64
 import numpy as np

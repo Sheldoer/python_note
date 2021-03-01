@@ -1,8 +1,3 @@
-"""
-@File    ：生成视频.py
-@Author  ：叶庭云
-@CSDN    ：https://yetingyun.blog.csdn.net/
-"""
 import cv2
 import os
 

@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-@File    ：词云.py
-@Author  ：叶庭云
-@CSDN    ：https://yetingyun.blog.csdn.net/
-"""
 from wordcloud import WordCloud
 import collections
 import jieba

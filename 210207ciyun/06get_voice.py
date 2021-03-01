@@ -1,8 +1,3 @@
-"""
-@File    ：插入音频.py
-@Author  ：叶庭云
-@CSDN    ：https://yetingyun.blog.csdn.net/
-"""
 import moviepy.editor as mpy
 
 # 读取词云视频
