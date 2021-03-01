@@ -2,8 +2,10 @@ def _2016():
     """
      `2016`年复试上机题
     **要求：**
-    文本文件`input.txt`由若干英文单词和分隔符(空格，回车，换行)构成. 根据如下说明编写程序统计不同单词出现的次数(频度).
-    将统计结果按出现频度从高到低排序，并将出现频度大于`5`的单词及其频度输出到文件`output.txt`中. 文件格式如图所示
+    文本文件`input.txt`由若干英文单词和分隔符(空格，回车，换行)构成. 根据如下
+    说明编写程序统计不同单词出现的次数(频度).
+    将统计结果按出现频度从高到低排序，并将出现频度大于`5`的单词及
+    其频度输出到文件`output.txt`中. 文件格式如图所示
     ![format](E:\Markdown\img\format.png)
     * 多个连续的分隔符被视为一个分隔符.
     * 大小写敏感.
@@ -23,7 +25,11 @@ def _2016():
         dic[word] = dic.get(word, 0) + 1
     ans = []
     for k in dic:
-        if dic.get(k) > 5:
+        if dic.get(k) > 1:
             ans.append('{}: {}'.format(k, dic.get(k)))
     with open('output.txt', 'w', encoding='utf-8') as f:
         f.write('\n'.join(ans))
+_2016()
+with open("output.txt",'r')as fp:
+        print(fp.read())
+fp.close()

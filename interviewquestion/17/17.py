@@ -23,7 +23,7 @@ def _2017():
     """
 
     def read_file():
-        with open('input.txt', encoding='utf-8', mode='rt') as f:
+        with open('data.txt', encoding='utf-8', mode='rt') as f:
             nums = f.read().split()
         nums = list(map(int, nums))
         size = len(nums)
@@ -78,3 +78,4 @@ def _2017():
         print_result(ls[:5])
 
     main()
+_2017()

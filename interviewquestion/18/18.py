@@ -56,7 +56,8 @@ def _2018(arr: list):
             this_factors =  my_dict[arr[j]]
             if f2(vs, this_factors):
                 p.add(arr[j])
-                vs = vs | this_factors
+                #vs = vs | this_factors
+                vs=vs.union(this_factors)
         if len(p) > M:
             M = len(p)
             ans = p
