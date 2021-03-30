@@ -1,6 +1,6 @@
 import struct
 from random import randint
-    """
+"""
     ##### `2015`年复试上机
     **要求：**
     * 从网页上下载`input.dat`文件，里面是用二进制编写的，里面放了一堆`int`型的数，
@@ -20,7 +20,6 @@ def read_file():
             value=struct.unpack('i',f)[0]
             point.append(value)
             f=fp.read(size)
-    fp.close()
     return point
 
 def make_coord(point:list):
@@ -57,7 +56,6 @@ def main():
         for i in range(100):
             data=struct.pack('i',randint(-5,100))
             fp.write(data)
-    fp.close()
     '''
     points=read_file()
     coords=make_coord(points)

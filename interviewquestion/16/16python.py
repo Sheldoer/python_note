@@ -1,24 +1,21 @@
 def read_file():
-    with open("input.txt",'r') as fp:
-        words=list(fp.read().split())
-    fp.close()
-    word=list(set(words))
-    count=[]
+    with open("input.txt", 'r') as fp:
+        words = fp.read().split()
+    word = sorted(set(words), key=words.index)
+    res = []
     for i in word:
-        count.append(words.count(i))
-    with open("output.txt",'w')as fp:
-        for i in range(len(count)):
-            if count[i]>1:
-                fp.write(str(word[i])+':'+str(count[i])+'\n')
-    fp.close()
+        res.append(words.count(i))
+    with open("output.txt", 'w')as fp:
+        for i in range(len(res)):
+            if res[i] > 1:
+                fp.write(str(word[i])+':'+str(res[i])+'\n')
+
 
 def main():
     read_file()
 
-if __name__=="__main__":
-    main()
-    with open("output.txt",'r')as fp:
-        print(fp.read())
-    fp.close()
 
-    
+if __name__ == "__main__":
+    main()
+    with open("output.txt", 'r')as fq:
+        print(fq.read())

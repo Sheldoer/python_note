@@ -29,7 +29,8 @@ def _2016():
             ans.append('{}: {}'.format(k, dic.get(k)))
     with open('output.txt', 'w', encoding='utf-8') as f:
         f.write('\n'.join(ans))
+
+
 _2016()
-with open("output.txt",'r')as fp:
-        print(fp.read())
-fp.close()
+with open("output.txt", 'r')as fp:
+    print(fp.read())

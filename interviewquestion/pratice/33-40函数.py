@@ -70,11 +70,18 @@ def func_37():
     s=input('input a string:')
     ms=''
     n=int(input('encode bite:'))
+    import re
+    nums=re.findall('\d+',s)
+    for i in range(len(nums)):
+        s=s.replace(nums[i],str(int(nums[i])*5))
     for i in s:
-        print(i)
-        ms=ms+str(chr(ord(i)+n))
-        print(ms)
-    print('加密前的字符串：{}\n加密后的字符串：{}'.format(s,ms)) #####未作出
+        if i>='A' and i<='Z':
+            ms+=str(chr(ord('A')+(ord(i)-ord('A')+n)%26))
+        elif i>='a' and i<='z':
+            ms+=str(chr(ord('a')+(ord(i)-ord('a')+n)%26))
+        else:
+            ms+=i
+    print('加密前的字符串：{}\n加密后的字符串：{}'.format(s,ms)) #####开始未作出
 def func_38():
     #将给定的英文语句单词倒序
     s=input('input a string:')    #输入待倒序语句
@@ -107,10 +114,10 @@ def main():
     #func_34()
     #func_35()
     #func_36()
-    #func_37()
+    func_37()
     #func_38()
     #func_39()
-    func_40()
+    #func_40()
     pass
 if __name__=='__main__':
     main()

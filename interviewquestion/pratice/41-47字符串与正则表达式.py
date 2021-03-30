@@ -38,7 +38,9 @@ def func_45():
 def func_46():
     #
     s=input('input a string:')    #输入指定字符串
-    re.sub('\s+','\s',s)
+    s=re.sub('\s+',' ',s)
+    s=s.replace(',',', ')
+    s=s.replace('.','. ')
     print(s)
     
 def func_47():
@@ -50,7 +52,7 @@ def main():
     #func_43()
     #func_44()
     #func_45()
-    #func_46()
+    func_46()
     
     pass
 if __name__=='__main__':

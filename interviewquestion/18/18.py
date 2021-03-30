@@ -1,4 +1,6 @@
 from random import randint
+
+
 def _2018(arr: list):
     """
     在20000个数中找一个满足下列条件的最大集合：
@@ -53,7 +55,7 @@ def _2018(arr: list):
         vs = my_dict[arr[i]]
         p.add(arr[i])
         for j in range(size):
-            this_factors =  my_dict[arr[j]]
+            this_factors = my_dict[arr[j]]
             if f2(vs, this_factors):
                 p.add(arr[j])
                 #vs = vs | this_factors
@@ -63,8 +65,10 @@ def _2018(arr: list):
             ans = p
 
     return ans
-arr=[]
-for i in range(20000):
-        arr.append(randint(0,32768))
-print(_2018(arr))
-    
+
+
+if __name__ == '__main__':
+    arr = []
+    for i in range(20000):
+        arr.append(randint(0, 32768))
+    print(_2018(arr))
